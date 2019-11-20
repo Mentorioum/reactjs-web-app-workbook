@@ -1,0 +1,13 @@
+code {
+	display: block;
+	padding: 4px;
+	background: #eee;
+	white-space: pre-wrap;
+}
+.user-block{
+	display: flex;
+	align-items: center;
+	img{
+		margin-right: 10px;
+	}
+}
