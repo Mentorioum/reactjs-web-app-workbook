@@ -17,32 +17,25 @@ function App() {
       <h2>Exercise.1</h2>
       <ul>
         <li>
-          <div/>
+          <code>{`<div/>`}</code>
           <p>Question.1 - Correct</p>
         </li>
         <li>
-          <div>hello</div>
+<code>{`<div>hello</div>`}</code>
           <p>Question.2 - Correct</p>
         </li>
         <li>
-          <div>hello</div><span>World</span>
-          <p>Question.3 - Correct</p>
+          <code>{`<div>hello</div><span>World</span>`}</code>
+          <p>Question.3 - Incorrect</p>
+          <h3>Possible variant:</h3>
+<code>{`<div>
+  <div>hello</div><span>World</span>
+</div>
+`}</code>
         </li>
         <li>
-          <p>Question.4 - Incorrect</p>
-          <h3>Possible variants:</h3>
-          <ol>
-            <li>
-              <div>hello<span></span> World</div>
-            </li>
-            <li>
-              <div>hello
-                <span/>
-                World
-                <div/>
-              </div>
-            </li>
-          </ol>
+          <code>{`<div>hello <span/> World <div/></div>`}</code>
+          <p>Question.4 - Correct</p>
         </li>
       </ul>
       <h2>Exercise.2</h2>
@@ -53,26 +46,26 @@ function App() {
         </li>
         <li>
           <p>Question.2</p>
-          <code>React.createElement({'\n'}
-            &nbsp;&nbsp;"div",{'\n'}
-            &nbsp;&nbsp;&#123;{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;className: "SplitPane"{'\n'}
-            &nbsp;&nbsp;&#125;,{'\n'}
-            &nbsp;&nbsp;React.createElement({'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;"div",{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;&#123;{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;className: "SplitPane-left"{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;&#125;,{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;"Left"{'\n'}
-            &nbsp;&nbsp;),{'\n'}
-            &nbsp;&nbsp;React.createElement({'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;"div",{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;&#123;{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;className: "SplitPane-right"{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;&#125;,{'\n'}
-            &nbsp;&nbsp;&nbsp;&nbsp;"Right"{'\n'}
-            &nbsp;&nbsp;){'\n'}
-          );</code>
+<code>{`React.createElement(
+  "div",
+  {
+    className: "SplitPane"
+  },
+  React.createElement(
+    "div",
+    {
+      className: "SplitPane-left"
+    },
+    "Left"
+  ),
+  React.createElement(
+    "div",
+    {
+      className: "SplitPane-right"
+    },
+    "Right"
+  )
+);`}</code>
         </li>
       </ul>
 
